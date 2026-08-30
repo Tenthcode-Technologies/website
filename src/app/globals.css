@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #111827;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-deep-navy: #0b0f19;
+  --color-tech-blue: #1d4ed8;
+  --color-electric-blue: #3b82f6;
+  --color-cloud-white: #f8fafc;
+  --color-deep-gray: #111827;
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(148 163 184 / 0.11) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(148 163 184 / 0.11) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.section-grid {
+  background-image:
+    linear-gradient(to right, rgb(59 130 246 / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(59 130 246 / 0.08) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to right, transparent, black 35%, black 75%, transparent);
+}
+
+.product-grid {
+  background-image:
+    linear-gradient(to right, rgb(59 130 246 / 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(59 130 246 / 0.14) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at 35% 60%, black, transparent 72%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

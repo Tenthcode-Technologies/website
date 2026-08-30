@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tenthcode Technologies Website
 
-## Getting Started
+The corporate website for [Tenthcode Technologies](https://tenthcode.com), an
+African technology company building software and hardware products for
+real-world needs and global relevance.
 
-First, run the development server:
+## Tech stack
+
+- Next.js 16 with the App Router
+- React 19 and React Compiler
+- TypeScript
+- Tailwind CSS 4
+- Inter through `next/font`
+
+## Development setup
+
+Install dependencies and start the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in a browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This Next.js release requires a current Node.js runtime (Node.js 20.9 or newer).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Commands
 
-## Learn More
+```bash
+npm run dev    # Start local development
+npm run lint   # Run ESLint
+npm run build  # Create a production build
+npm run start  # Run the production build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Site navigation, contact information, social profile placeholders, and the
+canonical domain are centralized in `src/config/site.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The corporate website does not require environment variables or external
+services. Do not commit secrets if future integrations are added.
 
-## Deploy on Vercel
+## Brand assets
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The official monochrome logo is stored at
+`public/brand/tenthcode-logo.svg`. A Cloud White variant is available at
+`public/brand/tenthcode-logo-white.svg` for dark brand surfaces. The favicon
+uses the Cloud White mark on a transparent background. Keep every variant
+monochrome and preserve its proportions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+The production domain is `https://tenthcode.com`. Vercel is the recommended
+deployment target. Run `npm run lint` and `npm run build` successfully before
+deploying, then configure the domain in the Vercel project settings.
