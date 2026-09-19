@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Tenthcode Technologies",
   shortName: "Tenthcode",
   url: "https://tenthcode.com",
-  email: "tenthcode.tech@gmail.com",
+  email: "hello@tenthcode.com",
   description:
     "Tenthcode Technologies builds software and hardware products that solve real-world problems, with Africa as our primary market and global relevance as our ambition.",
   navigation: [
